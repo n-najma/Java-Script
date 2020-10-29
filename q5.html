@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Q5</title>
+</head>
+<body>
+<p>
+Write a JavaScript function to capitalize the first letter of each word in a
+string
+</p>
+<script>
+
+function capitalize(str)
+{
+ return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
+document.write(capitalize('\"hi from skillsanta\"'));
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

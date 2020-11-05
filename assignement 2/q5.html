@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>question 5</title>
+
+</head>
+<body>
+<input type="text" id="input"></input>
+<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+<input type="button" id="button2" value="Display" onclick="display_array();"></input>
+<div id="Res"></div> 
+<script>
+var x = 0;
+var array = Array();
+
+function add_element_to_array()
+{
+ array[x] = document.getElementById("input").value;
+ alert("Element: " + array[x] + " Added at index " + x);
+ x++;
+ document.getElementById("input").value = "";
+}
+
+function display_array()
+{
+   var e = "<hr/>";   
+    
+   for (var y=0; y<array.length; y++)
+   {
+     e += "Element " + y + " = " + array[y] + "<br/>";
+   }
+   document.getElementById("Res").innerHTML = e;
+}
+
+
+
+</script>
+</body>
+</html>

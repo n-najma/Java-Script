@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Clock</title>
+</head>
+  <body>
+    <center>
+   <div class ="container my-4" style= "background-color:red">
+        
+            <h1 class="display-4">Current Time is :<span id="clk"></span></h1>
+            <p >CLOCK RUNNING ON ITS WAY.</p>
+             <hr class="my-4">
+            <p>We are here to show time.</p>
+            
+          </div>
+      </div>
+</center>
+<script>
+function clock(num) {return ("0" + num).slice(-2);}
+function time1() {
+  var today = new Date(),
+    h = today.getHours(),
+    m = today.getMinutes(),
+    s = today.getSeconds();
+    
+  h = h % 12;
+  h = h ? h : 12; // the hour '0' should be '12'
+  clk.innerHTML = h + ':' + 
+    clock(m) + ':' + 
+    clock(s) + ' ' + 
+    (h >= 12 ? 'PM' : 'AM');
+}
+window.onload = function() {
+  var clk = document.getElementById('clk');
+  t = setInterval(time1, 500);
+}
+
+
+
+
+</script>
+    
+  </body>
+</html

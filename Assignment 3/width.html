@@ -1,0 +1,29 @@
+
+<html>
+<head>
+
+<title>Window Size</title>
+</head>
+
+<body onload="getSize()" onresize="getSize()">
+<div id="ws"> 
+
+</div>
+<body>
+<script>
+
+
+function getSize()
+{
+var w = document.documentElement.clientWidth;
+var h = document.documentElement.clientHeight;
+        
+
+ document.getElementById('ws').innerHTML = "<h1>" + w + " *  " + h + "</h1>";
+}
+
+
+
+</script>
+</body>
+</html>

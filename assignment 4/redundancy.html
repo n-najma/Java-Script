@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Remove duplicate </title>
+</head>
+<body>
+<script>
+function removeDuplicates(num) {
+  var i,
+      len=num.length,
+      out=[],
+      obj={};
+ 
+  for (i=0; i<len; i++) {
+    obj[num[i]]=0;
+  }
+  for (i in obj) {
+    out.push(i);
+  }
+  return out;
+}
+var Mynum = [1, 2, 2, 4];
+result = removeDuplicates(Mynum);
+console.log(Mynum);
+console.log(result);</script>
+</body>
+</html>
